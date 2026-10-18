@@ -1,6 +1,6 @@
 # Q1. Ký ức đầu tiên của bạn là gì?
 
-Năm 3 tuổi, nhà mình chuyển ra thị xã, nhưng mình chưa đi được vì phải ở làng học hết lớp 3. Khu mình ở rất ít nhà, quanh nhà mình chỉ có 2 nhà, mỗi nhà cách nhau gần cây số. Khi chuyển nhà thì mẹ mình gửi mình ở nhà hàng xóm, mình ở đó học hết lớp 3.
+Năm lớp 3, nhà mình chuyển ra thị xã, nhưng mình chưa đi được vì phải ở làng học hết lớp 3. Khu mình ở rất ít nhà, quanh nhà mình chỉ có 2 nhà, mỗi nhà cách nhau gần cây số. Khi chuyển nhà thì mẹ mình gửi mình ở nhà hàng xóm, mình ở đó học hết lớp 3.
 
 Nhưng có một kỷ niệm mà mình nhớ mãi, dù mình cũng không nhớ rõ là tại sao mình lại nhớ. Mình nhớ hôm đó mình đi tắm, nhưng mình đã không giặt cái quần đùi màu đỏ, chỉ là một cái quần đùi bình thường, và mình đã vứt nó vào góc phòng tắm. 
 
