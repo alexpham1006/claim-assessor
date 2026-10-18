@@ -1,0 +1,20 @@
+---
+description: Testing conventions with pytest. Use when writing or editing tests.
+globs: "tests/**/*.py"
+alwaysApply: false
+---
+
+# Testing
+
+- Test behavior and public contracts, not private helpers or call counts.
+- One behavior per test, named `test_<unit>_<behavior>[_when_<condition>]`.
+  Parametrize instead of copy-pasting cases.
+- Unit tests never touch the network, a real LLM, or the real clock. Fake at the
+  boundary (the LLM client), not deep inside the code under test. Small checked-in
+  fixtures are fine; writes go to `tmp_path`.
+- Anything that needs an external service is an integration test, excluded from the
+  local gate.
+- Test work follows feature work: one end-to-end check per vertical slice, then focused
+  tests for high-risk logic, external boundaries, and regressions. Test count and
+  coverage are not goals.
+- A flaky test is a bug: fix or delete it, never add retries or sleeps.

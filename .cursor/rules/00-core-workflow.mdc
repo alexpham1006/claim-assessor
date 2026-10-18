@@ -1,0 +1,43 @@
+---
+description: Core workflow and production standard. Applies to every task.
+alwaysApply: true
+---
+
+# Core workflow
+
+## Language
+- Reply to the user in Vietnamese. Keep technical terms in English.
+- Code, identifiers, comments, commit messages, and docs are in English.
+
+## What "production" means here
+Code a senior can read once and understand. Do enough, no more.
+- Readability beats patterns. If a split or abstraction makes the code harder to
+  follow, undo it. More files and more functions are not more production.
+- Every function, file, and class needs a reason. A helper used once stays inline
+  unless its name says something the code does not.
+- Related things share a file; unrelated things do not. Three unrelated classes in
+  one file is wrong, so is one file per tiny function.
+- Never bend production code to make tests easier. Tests adapt to the code.
+- Do it the common way real projects do. If unsure what that is, say so; do not invent.
+- Names state the role (`reference_data`, `repository`), not the origin or the pattern.
+- Handle real risks, not every possible failure. Add logging, retries, health checks,
+  or persistence only when the feature needs them; document intentional gaps.
+- Build a vertical slice first. Do not build for speculative future requirements.
+
+## Working agreement
+- Read `AGENTS.md` and look for an existing pattern before writing a new one.
+- Task touching 3+ files, a new module, or an unclear requirement: show a short plan
+  or code preview and wait for approval.
+- Ask only when the answer changes the design; otherwise pick a default and state it.
+- Smallest coherent change. Refactor directly related code when needed; no unrelated cleanup.
+- Bug fix: reproduce it with a failing test first, then fix.
+- New dependency: justify it in one sentence, add with `uv add`, prefer the stdlib.
+- Comment the why, never the what.
+- A stop hook runs `make check`. Fix failures at the root cause.
+- Final message: what changed, why, how it was verified, follow-ups and risks.
+
+## Never
+- Commit, push, or amend unless explicitly asked.
+- Read, print, or edit `.env` or any secret. Add new keys to `.env.example` instead.
+- Disable a lint rule, add `# type: ignore`, or skip a test to make a check pass without
+  telling the user why.

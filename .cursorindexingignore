@@ -1,0 +1,16 @@
+# Not indexed for semantic search (noise), but still readable if explicitly opened.
+.venv/
+__pycache__/
+.ruff_cache/
+.mypy_cache/
+.pytest_cache/
+dist/
+build/
+*.egg-info/
+uv.lock
+data/
+*.ipynb
+*.log
+*.parquet
+*.sqlite
+*.db

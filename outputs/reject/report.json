@@ -1,0 +1,101 @@
+{
+  "document_review": [
+    {
+      "document_id": "DOC-011",
+      "document_type": "medical_report",
+      "status": "complete",
+      "issues": [],
+      "extracted_data": {
+        "member_id": "MEMBER-002",
+        "diagnosis": "Encounter for cosmetic surgery",
+        "diagnosis_code": "Z41.1",
+        "treatment_date": "2026-09-20",
+        "procedures": [
+          "Primary cosmetic rhinoplasty"
+        ],
+        "procedure_codes": [
+          "30410"
+        ],
+        "stated_purpose": "Aesthetic improvement",
+        "therapeutic_indication_documented": false
+      }
+    },
+    {
+      "document_id": "DOC-012",
+      "document_type": "hospital_bill",
+      "status": "complete",
+      "issues": [],
+      "extracted_data": {
+        "invoice_number": "INV-002",
+        "currency": "VND",
+        "total_amount": 65000000,
+        "line_items": [
+          {
+            "description": "Elective cosmetic rhinoplasty and facility charges",
+            "amount": 65000000
+          }
+        ]
+      }
+    },
+    {
+      "document_id": "DOC-013",
+      "document_type": "discharge_summary",
+      "status": "complete",
+      "issues": [],
+      "extracted_data": {
+        "member_id": "MEMBER-002",
+        "admission_date": "2026-09-20",
+        "discharge_date": "2026-09-21",
+        "diagnosis": "Encounter for cosmetic surgery",
+        "diagnosis_code": "Z41.1",
+        "procedures": [
+          "Primary cosmetic rhinoplasty"
+        ],
+        "procedure_codes": [
+          "30410"
+        ]
+      }
+    }
+  ],
+  "missing_documents": [],
+  "policy_verification": {
+    "policy_id": "POLICY-002",
+    "status": "active",
+    "member_covered": true,
+    "within_coverage_period": true,
+    "claim_type_included": false
+  },
+  "medical_necessity": {
+    "status": "needs_review",
+    "reason": "The code and procedure labels alone do not establish medical necessity; review the documentation for functional, reconstructive, or other therapeutic indication. In this test case, coverage rejection is based on the policy exclusion, not this rule."
+  },
+  "benefit_calculation": {
+    "submitted_amount": "65000000",
+    "covered_amount": "0",
+    "coinsurance_amount": "0",
+    "member_responsibility": "65000000",
+    "remaining_limit_before": "0",
+    "remaining_limit_after_claim": "0",
+    "clause_ids": [
+      "EXCLUSION-COSMETIC-001"
+    ]
+  },
+  "recommendation": "REJECT",
+  "findings": [
+    {
+      "clause_id": "EXCLUSION-COSMETIC-001",
+      "message": "Excluded: Elective procedures performed solely for cosmetic or aesthetic purposes are excluded from coverage."
+    },
+    {
+      "clause_id": "EXCLUSION-COSMETIC-001",
+      "message": "This claim type is not covered by the policy"
+    }
+  ],
+  "reasoning": [
+    "Elective procedures performed solely for cosmetic or aesthetic purposes are excluded from coverage according to clause EXCLUSION-COSMETIC-001.",
+    "This claim type is not covered by the policy under clause EXCLUSION-COSMETIC-001."
+  ],
+  "policy_citations": [
+    "EXCLUSION-COSMETIC-001"
+  ]
+}

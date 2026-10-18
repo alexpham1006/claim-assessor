@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+*.egg-info/
+dist/
+build/
+
+# Tooling caches
+.ruff_cache/
+.mypy_cache/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Secrets and local data
+.env
+.env.*
+!.env.example
+*.local.*
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
+
+# Cursor local state (keep rules, skills, agents, hooks committed)
+.cursor/plans/
+.cursor/hooks/.state/

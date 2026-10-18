@@ -1,0 +1,28 @@
+{
+  "claim_id": "CLAIM-001",
+  "policy_id": "POLICY-001",
+  "member_id": "MEMBER-001",
+  "claim_type": "hospitalization",
+  "amount": 50000000,
+  "currency": "VND",
+  "diagnosis": "Acute appendicitis",
+  "diagnosis_code": "K35.80",
+  "procedures": [
+    "Laparoscopic appendectomy"
+  ],
+  "procedure_codes": [
+    "44970"
+  ],
+  "treatment_date": "2026-10-10",
+  "submitted_documents": [
+    {
+      "document_id": "DOC-001"
+    },
+    {
+      "document_id": "DOC-002"
+    },
+    {
+      "document_id": "DOC-003"
+    }
+  ]
+}

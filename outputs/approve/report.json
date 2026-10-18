@@ -1,0 +1,118 @@
+{
+  "document_review": [
+    {
+      "document_id": "DOC-001",
+      "document_type": "medical_report",
+      "status": "complete",
+      "issues": [],
+      "extracted_data": {
+        "member_id": "MEMBER-001",
+        "diagnosis": "Acute appendicitis",
+        "diagnosis_code": "K35.80",
+        "treatment_date": "2026-10-10",
+        "procedures": [
+          "Laparoscopic appendectomy"
+        ],
+        "procedure_codes": [
+          "44970"
+        ]
+      }
+    },
+    {
+      "document_id": "DOC-002",
+      "document_type": "hospital_bill",
+      "status": "complete",
+      "issues": [],
+      "extracted_data": {
+        "invoice_number": "INV-001",
+        "currency": "VND",
+        "total_amount": 50000000,
+        "line_items": [
+          {
+            "description": "Hospital and surgical expenses",
+            "amount": 50000000
+          }
+        ]
+      }
+    },
+    {
+      "document_id": "DOC-003",
+      "document_type": "discharge_summary",
+      "status": "complete",
+      "issues": [],
+      "extracted_data": {
+        "member_id": "MEMBER-001",
+        "admission_date": "2026-10-10",
+        "discharge_date": "2026-10-12",
+        "diagnosis": "Acute appendicitis",
+        "diagnosis_code": "K35.80",
+        "procedures": [
+          "Laparoscopic appendectomy"
+        ],
+        "procedure_codes": [
+          "44970"
+        ]
+      }
+    }
+  ],
+  "missing_documents": [],
+  "policy_verification": {
+    "policy_id": "POLICY-001",
+    "status": "active",
+    "member_covered": true,
+    "within_coverage_period": true,
+    "claim_type_included": true
+  },
+  "medical_necessity": {
+    "status": "supported",
+    "reason": "The synthetic test scenario treats laparoscopic appendectomy as consistent with the documented acute appendicitis diagnosis."
+  },
+  "benefit_calculation": {
+    "submitted_amount": "50000000",
+    "covered_amount": "50000000",
+    "coinsurance_amount": "5000000.00",
+    "member_responsibility": "5000000.00",
+    "remaining_limit_before": "80000000",
+    "remaining_limit_after_claim": "35000000.00",
+    "clause_ids": [
+      "COVERAGE-001",
+      "BENEFIT-LIMIT-001",
+      "COINSURANCE-001"
+    ]
+  },
+  "recommendation": "APPROVE",
+  "findings": [
+    {
+      "clause_id": "COVERAGE-001",
+      "message": "Policy active for the treatment date"
+    },
+    {
+      "clause_id": "COVERAGE-001",
+      "message": "Member is covered"
+    },
+    {
+      "clause_id": "COVERAGE-001",
+      "message": "Treatment is medically necessary"
+    },
+    {
+      "clause_id": "BENEFIT-LIMIT-001",
+      "message": "Covered 50000000 VND, remaining limit 35000000.00 VND"
+    },
+    {
+      "clause_id": "COINSURANCE-001",
+      "message": "Member responsibility 5000000.00 VND"
+    }
+  ],
+  "reasoning": [
+    "The policy is active for the treatment date as specified under clause COVERAGE-001.",
+    "The member is covered for inpatient hospitalization expenses under clause COVERAGE-001.",
+    "The treatment is medically necessary as supported by the medical evaluation under clause COVERAGE-001.",
+    "The covered amount is 50000000 VND and the remaining limit after the claim is 35000000.00 VND according to clause BENEFIT-LIMIT-001.",
+    "The member responsibility for coinsurance is 5000000.00 VND in accordance with clause COINSURANCE-001."
+  ],
+  "policy_citations": [
+    "BENEFIT-LIMIT-001",
+    "COINSURANCE-001",
+    "COVERAGE-001"
+  ]
+}

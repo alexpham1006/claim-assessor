@@ -1,0 +1,145 @@
+{
+  "documents": [
+    {
+      "document_id": "DOC-001",
+      "document_type": "medical_report",
+      "status": "complete",
+      "issues": [],
+      "extracted_data": {
+        "member_id": "MEMBER-001",
+        "diagnosis": "Acute appendicitis",
+        "diagnosis_code": "K35.80",
+        "treatment_date": "2026-10-10",
+        "procedures": [
+          "Laparoscopic appendectomy"
+        ],
+        "procedure_codes": [
+          "44970"
+        ]
+      }
+    },
+    {
+      "document_id": "DOC-002",
+      "document_type": "hospital_bill",
+      "status": "complete",
+      "issues": [],
+      "extracted_data": {
+        "invoice_number": "INV-001",
+        "currency": "VND",
+        "total_amount": 50000000,
+        "line_items": [
+          {
+            "description": "Hospital and surgical expenses",
+            "amount": 50000000
+          }
+        ]
+      }
+    },
+    {
+      "document_id": "DOC-003",
+      "document_type": "discharge_summary",
+      "status": "complete",
+      "issues": [],
+      "extracted_data": {
+        "member_id": "MEMBER-001",
+        "admission_date": "2026-10-10",
+        "discharge_date": "2026-10-12",
+        "diagnosis": "Acute appendicitis",
+        "diagnosis_code": "K35.80",
+        "procedures": [
+          "Laparoscopic appendectomy"
+        ],
+        "procedure_codes": [
+          "44970"
+        ]
+      }
+    },
+    {
+      "document_id": "DOC-011",
+      "document_type": "medical_report",
+      "status": "complete",
+      "issues": [],
+      "extracted_data": {
+        "member_id": "MEMBER-002",
+        "diagnosis": "Encounter for cosmetic surgery",
+        "diagnosis_code": "Z41.1",
+        "treatment_date": "2026-09-20",
+        "procedures": [
+          "Primary cosmetic rhinoplasty"
+        ],
+        "procedure_codes": [
+          "30410"
+        ],
+        "stated_purpose": "Aesthetic improvement",
+        "therapeutic_indication_documented": false
+      }
+    },
+    {
+      "document_id": "DOC-012",
+      "document_type": "hospital_bill",
+      "status": "complete",
+      "issues": [],
+      "extracted_data": {
+        "invoice_number": "INV-002",
+        "currency": "VND",
+        "total_amount": 65000000,
+        "line_items": [
+          {
+            "description": "Elective cosmetic rhinoplasty and facility charges",
+            "amount": 65000000
+          }
+        ]
+      }
+    },
+    {
+      "document_id": "DOC-013",
+      "document_type": "discharge_summary",
+      "status": "complete",
+      "issues": [],
+      "extracted_data": {
+        "member_id": "MEMBER-002",
+        "admission_date": "2026-09-20",
+        "discharge_date": "2026-09-21",
+        "diagnosis": "Encounter for cosmetic surgery",
+        "diagnosis_code": "Z41.1",
+        "procedures": [
+          "Primary cosmetic rhinoplasty"
+        ],
+        "procedure_codes": [
+          "30410"
+        ]
+      }
+    },
+    {
+      "document_id": "DOC-021",
+      "document_type": "medical_report",
+      "status": "complete",
+      "issues": [],
+      "extracted_data": {
+        "member_id": "MEMBER-003",
+        "diagnosis": "Noninfective acute gastroenteritis",
+        "diagnosis_code": "K52.9",
+        "treatment_date": "2026-10-12",
+        "procedures": [],
+        "procedure_codes": []
+      }
+    },
+    {
+      "document_id": "DOC-022",
+      "document_type": "hospital_bill",
+      "status": "complete",
+      "issues": [],
+      "extracted_data": {
+        "invoice_number": "INV-003",
+        "currency": "VND",
+        "total_amount": 28000000,
+        "line_items": [
+          {
+            "description": "Hospitalization and medical treatment",
+            "amount": 28000000
+          }
+        ]
+      }
+    }
+  ]
+}

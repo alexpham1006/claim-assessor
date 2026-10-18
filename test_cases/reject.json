@@ -1,0 +1,28 @@
+{
+  "claim_id": "CLAIM-002",
+  "policy_id": "POLICY-002",
+  "member_id": "MEMBER-002",
+  "claim_type": "cosmetic_surgery",
+  "amount": 65000000,
+  "currency": "VND",
+  "diagnosis": "Encounter for cosmetic surgery",
+  "diagnosis_code": "Z41.1",
+  "procedures": [
+    "Primary cosmetic rhinoplasty"
+  ],
+  "procedure_codes": [
+    "30410"
+  ],
+  "treatment_date": "2026-09-20",
+  "submitted_documents": [
+    {
+      "document_id": "DOC-011"
+    },
+    {
+      "document_id": "DOC-012"
+    },
+    {
+      "document_id": "DOC-013"
+    }
+  ]
+}

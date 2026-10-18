@@ -1,0 +1,19 @@
+---
+description: Python design conventions beyond what ruff and mypy enforce.
+globs: "**/*.py"
+alwaysApply: false
+---
+
+# Python style
+
+Ruff and mypy (strict) already enforce formatting, types, imports, `print`, and mutable
+defaults. Beyond that:
+
+- Validate data crossing an external boundary (API, LLM output, file, env) on entry.
+  Pydantic for external contracts, dataclasses for small internal value objects.
+  No model without a clear boundary.
+- Raise specific domain errors, defined in one module. Never swallow an error silently.
+- No module-level side effects or global mutable state. Config only through `Settings`.
+- Keep functions focused. Do not split or combine them to satisfy a line count.
+  Prefer pure functions; isolate I/O.
+- No docstrings. Add a one-line comment only for a constraint the code cannot show.

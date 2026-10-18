@@ -1,0 +1,21 @@
+{
+  "claim_id": "CLAIM-003",
+  "policy_id": "POLICY-003",
+  "member_id": "MEMBER-003",
+  "claim_type": "hospitalization",
+  "amount": 28000000,
+  "currency": "VND",
+  "diagnosis": "Noninfective acute gastroenteritis",
+  "diagnosis_code": "K52.9",
+  "procedures": [],
+  "procedure_codes": [],
+  "treatment_date": "2026-10-12",
+  "submitted_documents": [
+    {
+      "document_id": "DOC-021"
+    },
+    {
+      "document_id": "DOC-022"
+    }
+  ]
+}

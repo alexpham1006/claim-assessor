@@ -1,0 +1,45 @@
+{
+  "version": "1.0",
+  "description": "Synthetic rules for the Challenge 11 demo only; not for real clinical decisions.",
+  "rules": [
+    {
+      "rule_id": "MN-001",
+      "diagnosis": "Acute appendicitis",
+      "diagnosis_code": "K35.80",
+      "procedures": [
+        "Laparoscopic appendectomy"
+      ],
+      "procedure_codes": [
+        "44970"
+      ],
+      "result": "supported",
+      "reason": "The synthetic test scenario treats laparoscopic appendectomy as consistent with the documented acute appendicitis diagnosis."
+    },
+    {
+      "rule_id": "MN-002",
+      "diagnosis": "Encounter for cosmetic surgery",
+      "diagnosis_code": "Z41.1",
+      "procedures": [
+        "Primary cosmetic rhinoplasty"
+      ],
+      "procedure_codes": [
+        "30410"
+      ],
+      "result": "needs_review",
+      "reason": "The code and procedure labels alone do not establish medical necessity; review the documentation for functional, reconstructive, or other therapeutic indication. In this test case, coverage rejection is based on the policy exclusion, not this rule."
+    },
+    {
+      "rule_id": "MN-003",
+      "diagnosis": "Noninfective acute gastroenteritis",
+      "diagnosis_code": "K52.9",
+      "procedures": [],
+      "procedure_codes": [],
+      "result": "needs_review",
+      "reason": "No procedure is specified and the synthetic data does not provide sufficient clinical criteria to make a definitive medical-necessity assessment."
+    }
+  ],
+  "fallback": {
+    "result": "needs_review",
+    "reason": "No exact diagnosis/procedure rule matched; do not infer medical necessity from code matching alone."
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "approve": {
+    "recommendation": "APPROVE",
+    "covered_amount": "50000000",
+    "member_responsibility": "5000000",
+    "document_statuses": {
+      "DOC-001": "complete",
+      "DOC-002": "complete",
+      "DOC-003": "complete"
+    },
+    "missing_document_types": [],
+    "policy_citations": [
+      "COVERAGE-001",
+      "BENEFIT-LIMIT-001",
+      "COINSURANCE-001"
+    ]
+  },
+  "reject": {
+    "recommendation": "REJECT",
+    "covered_amount": "0",
+    "member_responsibility": "65000000",
+    "document_statuses": {
+      "DOC-011": "complete",
+      "DOC-012": "complete",
+      "DOC-013": "complete"
+    },
+    "missing_document_types": [],
+    "policy_citations": [
+      "EXCLUSION-COSMETIC-001"
+    ]
+  },
+  "request_more_info": {
+    "recommendation": "REQUEST_MORE_INFO",
+    "covered_amount": "28000000",
+    "member_responsibility": "2800000",
+    "document_statuses": {
+      "DOC-021": "complete",
+      "DOC-022": "complete"
+    },
+    "missing_document_types": [
+      "discharge_summary"
+    ],
+    "policy_citations": [
+      "COVERAGE-001",
+      "REQUIRED-DOCUMENTS-001"
+    ]
+  }
+}

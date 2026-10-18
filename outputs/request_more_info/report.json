@@ -1,0 +1,81 @@
+{
+  "document_review": [
+    {
+      "document_id": "DOC-021",
+      "document_type": "medical_report",
+      "status": "complete",
+      "issues": [],
+      "extracted_data": {
+        "member_id": "MEMBER-003",
+        "diagnosis": "Noninfective acute gastroenteritis",
+        "diagnosis_code": "K52.9",
+        "treatment_date": "2026-10-12",
+        "procedures": [],
+        "procedure_codes": []
+      }
+    },
+    {
+      "document_id": "DOC-022",
+      "document_type": "hospital_bill",
+      "status": "complete",
+      "issues": [],
+      "extracted_data": {
+        "invoice_number": "INV-003",
+        "currency": "VND",
+        "total_amount": 28000000,
+        "line_items": [
+          {
+            "description": "Hospitalization and medical treatment",
+            "amount": 28000000
+          }
+        ]
+      }
+    }
+  ],
+  "missing_documents": [
+    "discharge_summary"
+  ],
+  "policy_verification": {
+    "policy_id": "POLICY-003",
+    "status": "active",
+    "member_covered": true,
+    "within_coverage_period": true,
+    "claim_type_included": true
+  },
+  "medical_necessity": {
+    "status": "needs_review",
+    "reason": "No procedure is specified and the synthetic data does not provide sufficient clinical criteria to make a definitive medical-necessity assessment."
+  },
+  "benefit_calculation": {
+    "submitted_amount": "28000000",
+    "covered_amount": "28000000",
+    "coinsurance_amount": "2800000.00",
+    "member_responsibility": "2800000.00",
+    "remaining_limit_before": "60000000",
+    "remaining_limit_after_claim": "34800000.00",
+    "clause_ids": [
+      "COVERAGE-001",
+      "BENEFIT-LIMIT-001",
+      "COINSURANCE-001"
+    ]
+  },
+  "recommendation": "REQUEST_MORE_INFO",
+  "findings": [
+    {
+      "clause_id": "REQUIRED-DOCUMENTS-001",
+      "message": "Missing discharge_summary"
+    },
+    {
+      "clause_id": "COVERAGE-001",
+      "message": "Clinical review required: No procedure is specified and the synthetic data does not provide sufficient clinical criteria to make a definitive medical-necessity assessment."
+    }
+  ],
+  "reasoning": [
+    "The hospitalization claim lacks the discharge_summary required by policy clause REQUIRED-DOCUMENTS-001.",
+    "A clinical review is required under policy clause COVERAGE-001 because no procedure is specified and the synthetic data does not provide sufficient clinical criteria to make a definitive medical-necessity assessment."
+  ],
+  "policy_citations": [
+    "COVERAGE-001",
+    "REQUIRED-DOCUMENTS-001"
+  ]
+}

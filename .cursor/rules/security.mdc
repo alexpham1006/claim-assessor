@@ -1,0 +1,15 @@
+---
+description: Security baseline. Applies to every task.
+alwaysApply: true
+---
+
+# Security baseline
+
+Ruff's bandit rules (`S`) already flag `shell=True`, `pickle`, unsafe `yaml.load`, and
+`verify=False`. Beyond that:
+
+- Secrets only via environment / `.env` (git-ignored). Never hardcode, log, or echo them;
+  use `pydantic.SecretStr`.
+- Validate and bound all external input (size, type, range). Parameterize SQL.
+- Prefer well-maintained dependencies; flag anything unmaintained or with a known CVE.
+- If you notice a leaked secret in the repo or history, stop and tell the user.

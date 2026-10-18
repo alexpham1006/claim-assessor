@@ -1,0 +1,183 @@
+{
+  "policies": [
+    {
+      "policy_id": "POLICY-001",
+      "policyholder": {
+        "member_id": "MEMBER-001",
+        "name": "Nguyen Van An (fictional)"
+      },
+      "status": "active",
+      "coverage_period": {
+        "start_date": "2026-01-01",
+        "end_date": "2026-12-31"
+      },
+      "claim_requirements": {
+        "hospitalization": {
+          "required_documents": [
+            "medical_report",
+            "hospital_bill",
+            "discharge_summary"
+          ]
+        }
+      },
+      "benefits": {
+        "hospitalization": {
+          "covered": true,
+          "annual_limit": 100000000,
+          "remaining_limit_before_claim": 80000000,
+          "per_claim_limit": 100000000,
+          "coinsurance_rate": 0.1
+        }
+      },
+      "waiting_period": {
+        "months": 0,
+        "satisfied": true
+      },
+      "exclusions": [],
+      "clauses": [
+        {
+          "clause_id": "COVERAGE-001",
+          "title": "Inpatient hospitalization coverage",
+          "text": "Eligible inpatient hospitalization expenses are covered under the hospitalization benefit.",
+          "type": "coverage"
+        },
+        {
+          "clause_id": "BENEFIT-LIMIT-001",
+          "title": "Remaining benefit limit",
+          "text": "Payment must not exceed the applicable remaining benefit limit. For this synthetic policy, the remaining limit decreases by the amount paid by the insurer.",
+          "type": "benefit_limit"
+        },
+        {
+          "clause_id": "COINSURANCE-001",
+          "title": "Member coinsurance",
+          "text": "The member is responsible for 10% of eligible covered expenses.",
+          "type": "coinsurance"
+        },
+        {
+          "clause_id": "REQUIRED-DOCUMENTS-001",
+          "title": "Required claim documents",
+          "text": "Hospitalization claims require a medical report, hospital bill, and discharge summary.",
+          "type": "required_documents"
+        }
+      ]
+    },
+    {
+      "policy_id": "POLICY-002",
+      "policyholder": {
+        "member_id": "MEMBER-002",
+        "name": "Tran Thi Binh (fictional)"
+      },
+      "status": "active",
+      "coverage_period": {
+        "start_date": "2026-01-01",
+        "end_date": "2026-12-31"
+      },
+      "claim_requirements": {
+        "cosmetic_surgery": {
+          "required_documents": [
+            "medical_report",
+            "hospital_bill",
+            "discharge_summary"
+          ]
+        }
+      },
+      "benefits": {
+        "cosmetic_surgery": {
+          "covered": false,
+          "annual_limit": 0,
+          "remaining_limit_before_claim": 0,
+          "per_claim_limit": 0,
+          "coinsurance_rate": 0
+        }
+      },
+      "waiting_period": {
+        "months": 0,
+        "satisfied": true
+      },
+      "exclusions": [
+        {
+          "exclusion_id": "EXCL-COS-001",
+          "description": "Elective procedures performed solely for cosmetic or aesthetic purposes are excluded from coverage.",
+          "applies_to": [
+            "Primary cosmetic rhinoplasty"
+          ]
+        }
+      ],
+      "clauses": [
+        {
+          "clause_id": "EXCLUSION-COSMETIC-001",
+          "title": "Cosmetic procedures exclusion",
+          "text": "Elective procedures performed solely for cosmetic or aesthetic purposes are excluded from coverage.",
+          "type": "exclusion"
+        },
+        {
+          "clause_id": "REQUIRED-DOCUMENTS-COSMETIC-001",
+          "title": "Required claim documents",
+          "text": "Cosmetic surgery claims in this synthetic test require a medical report, hospital bill, and discharge summary.",
+          "type": "required_documents"
+        }
+      ]
+    },
+    {
+      "policy_id": "POLICY-003",
+      "policyholder": {
+        "member_id": "MEMBER-003",
+        "name": "Le Minh Duc (fictional)"
+      },
+      "status": "active",
+      "coverage_period": {
+        "start_date": "2026-01-01",
+        "end_date": "2026-12-31"
+      },
+      "claim_requirements": {
+        "hospitalization": {
+          "required_documents": [
+            "medical_report",
+            "hospital_bill",
+            "discharge_summary"
+          ]
+        }
+      },
+      "benefits": {
+        "hospitalization": {
+          "covered": true,
+          "annual_limit": 80000000,
+          "remaining_limit_before_claim": 60000000,
+          "per_claim_limit": 80000000,
+          "coinsurance_rate": 0.1
+        }
+      },
+      "waiting_period": {
+        "months": 0,
+        "satisfied": true
+      },
+      "exclusions": [],
+      "clauses": [
+        {
+          "clause_id": "COVERAGE-001",
+          "title": "Inpatient hospitalization coverage",
+          "text": "Eligible inpatient hospitalization expenses are covered under the hospitalization benefit.",
+          "type": "coverage"
+        },
+        {
+          "clause_id": "BENEFIT-LIMIT-001",
+          "title": "Remaining benefit limit",
+          "text": "Payment must not exceed the applicable remaining benefit limit.",
+          "type": "benefit_limit"
+        },
+        {
+          "clause_id": "COINSURANCE-001",
+          "title": "Member coinsurance",
+          "text": "The member is responsible for 10% of eligible covered expenses.",
+          "type": "coinsurance"
+        },
+        {
+          "clause_id": "REQUIRED-DOCUMENTS-001",
+          "title": "Required claim documents",
+          "text": "Hospitalization claims require a medical report, hospital bill, and discharge summary.",
+          "type": "required_documents"
+        }
+      ]
+    }
+  ]
+}
